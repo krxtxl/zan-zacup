@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zan-Za Cup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="zanzacuplogo.png" width="120">
+    </div>
+
+    <nav>
+        <ul>
+            <li class="active" id="homeBtn">🏠︎ Home</li>
+            <li id="productBtn">☕︎ Products</li>
+            <li id="playlistBtn">𝄞 Our Coffee Playlist</li>
+            <li id="aboutBtn">✉︎ About us</li>
+        </ul>
+    </nav>
+
+    <div class="search">
+        <img src="searchlogo.png" width="30">
+</div>
+</header>
+
+<section class="hero">
+    <div class="left">
+        <img src="zanzaopening.png" width="520">
+    </div>
+
+    <div class="right">
+        <div class="location">
+            <img src="locationlogo.png" width="50">
+            <span>Cavite City</span>
+        </div>
+
+        <h1>“COFFEE MADE WITH A<br>WAGGING HEART”</h1>
+
+        <p>
+            A cozy coffee shop, where every cup is made with warmth,
+            comfort, and the kind of love only a loyal companion can give.
+        </p>
+
+        <div class="choices">
+            <div class="coffee">
+                <img src="coffeelogo.png" width="280">
+                <button onclick="goToCoffee()">COFFEE?</button>
+            </div>
+
+            <div class="or">OR</div>
+
+            <div class="pastry">
+                <img src="pastrylogo.png" width="280">
+                <button onclick="goToPastry()">PASTRY?</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="productsPage">
+    <div class="menu-section" id="coffeeMenu">
+        <div class="menu-text">
+            <h2>Coffee Menu</h2>
+            <p>ESPRESSO ...................................... ₱70</p>
+            <p>AMERICANO ..................................... ₱80</p>
+            <p>CAPPUCCINO .................................... ₱95</p>
+            <p>CAFFÈ LATTE ................................... ₱95</p>
+            <p>CARAMEL LATTE ................................. ₱110</p>
+            <p>VANILLA LATTE ................................. ₱110</p>
+            <p>MOCHA LATTE ................................... ₱115</p>
+            <p>HAZELNUT LATTE ................................ ₱115</p>
+            <p>ICED COFFEE ................................... ₱90</p>
+            <p>ICED LATTE .................................... ₱100</p>
+            <p>COLD BREW ..................................... ₱120</p>
+        </div>
+
+        <div class="menu-image">
+            <img src="coffeemenu.png" width="395">
+        </div>
+    </div>
+
+    <div class="menu-section" id="pastryMenu">
+        <div class="menu-image">
+            <img src="pastrymenu.png" width="400">
+        </div>
+
+        <div class="menu-text">
+            <h2>Pastry Menu</h2>
+            <p>CROISSANT .............................................. ₱85</p>
+            <p>CHOCOLATE CROISSANT .................................... ₱95</p>
+            <p>BLUEBERRY MUFFIN ....................................... ₱90</p>
+            <p>BANANA BREAD ........................................... ₱85</p>
+            <p>CINNAMON ROLL .......................................... ₱95</p>
+            <p>CHEESE DANISH .......................................... ₱100</p>
+            <p>CHOCOLATE COOKIE ....................................... ₱60</p>
+            <p>BROWNIE ................................................ ₱75</p>
+        </div>
+    </div>
+    
+    <div class="addons-bottom">
+        <h3>add-ons</h3>
+        <p>EXTRA SHOT......................................................... ₱20</p>
+        <p>OAT MILK........................................................... ₱25</p>
+        <p>WHIPPED CREAM...................................................... ₱20</p>
+        <p>CARAMEL DRIZZLE.................................................... ₱15</p>
+    </div>
+</section>
+
+<section class="playlist" id="playlistPage">
+
+    <h1 class="playlist-title">
+        SOFT BARKS, WARM BREWS, AND GENTLE<br>
+         TUNES ALL IN ONE COZY PLAYLIST.
+    </h1>
+
+    <div class="playlist-content">
+
+        <div class="music-player">
+            <img src="vinyl.png" width="280" class="vinyl" id="vinyl">
+
+            <h3 id="songTitle">Coffee break with Jazz</h3>
+            <p id="songArtist"><i>The Cozy Cafe</i></p>
+
+            <input type="range" id="progress" value="0" min="0" max="100">
+
+            <div class="controls">
+                <button onclick="prevSong()">⏮</button>
+                <button onclick="playPause()" id="playBtn">▶</button>
+                <button onclick="nextSong()">⏭</button>
+            </div>
+
+            <audio id="audio"></audio>
+        </div>
+
+        <div class="playlist-dog">
+            <img src="zanzapeek.png" width="550">
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="aboutPage">
+
+    <img src="zanzacuplogo2.png" width="350" class="about-logo">
+    <img src="zanzaID.png" width="500" class="about-id">
+
+    <div class="about-text">
+        <p>Zan-Za Cup was inspired by a small but unforgettable soul. She wasn’t just a pet; she was a source of warmth, joy, and unconditional love that made even the simplest days feel special.</p>
+        <p>Her gentle presence and playful spirit became the heart behind this café. Just like Zan-Za, we wanted to create a space that feels comforting, welcoming, and full of life. A place where people can slow down, breathe, and enjoy moments that truly matter.</p>
+        <p>At Zan-Za Cup, every cup of coffee is crafted with care and meaning. It’s not just about rich flavors—it’s about the feeling it brings. The warmth of a drink in your hands, the calm of soft music in the background, and the quiet happiness of being present.</p>
+        <p>This café is more than a coffee shop—it’s a tribute. A reminder of loyalty, love, and the little things that stay with us forever.</p>
+        <p>Inspired by Zan-Za, made with heart, and shared with you—one cozy cup at a time.</p>
+    </div>
+
+    <h2>Contact us</h2>
+    <p class="contact-sub">Click the button/s to connect with us!</p>
+
+    <div class="contact-icons">
+        <a href="mailto:zzzanzzza@gmail.com">
+            <img src="emaillogo.png" width="120">
+            <span>zzzanzzza@gmail.com</span>
+        </a>
+
+        <a href="tel:+639381362680">
+            <img src="phonelogo.png" width="120">
+            <span>+63 938 136 2680</span>
+        </a>
+
+        <a href="https://www.facebook.com/zanzacup/" target="_blank">
+            <img src="fblogo.png" width="120">
+            <span>Zan-za Cup</span>
+        </a>
+    </div>
+
+    <footer>
+      <span>&#169; 2025 ZAN-ZA CUP &mdash; OPEN DAILY 24/7</span>
+      <span> • Cavite City</span>
+    </footer>
+
+</section>
+
+<script>
+const sections = {
+    home: document.querySelector(".hero"),
+    products: document.getElementById("productsPage"),
+    playlist: document.getElementById("playlistPage"),
+    about: document.getElementById("aboutPage")
+};
+
+const navs = document.querySelectorAll("nav ul li");
+
+function show(page) {
+    for (let key in sections) {
+        sections[key].style.display = "none";
+    }
+    sections[page].style.display = page === "home" ? "flex" : "block";
+    navs.forEach(n => n.classList.remove("active"));
+}
+
+homeBtn.onclick = () => { show("home"); homeBtn.classList.add("active"); }
+productBtn.onclick = () => { show("products"); productBtn.classList.add("active"); }
+playlistBtn.onclick = () => { show("playlist"); playlistBtn.classList.add("active"); }
+aboutBtn.onclick = () => { show("about"); aboutBtn.classList.add("active"); }
+
+
+const audio = document.getElementById("audio");
+audio.loop = true;
+
+const playBtn = document.getElementById("playBtn");
+const vinyl = document.getElementById("vinyl");
+const progress = document.getElementById("progress");
+const songTitle = document.getElementById("songTitle");
+const songArtist = document.getElementById("songArtist");
+
+const songs = [
+    {title:"Coffee break with Jazz",artist:"The Cozy Cafe",file:"songone.mp3"},
+    {title:"In Dreamland",artist:"Chillpeach",file:"songtwo.mp3"},
+    {title:"Rose Water",artist:"Massobeats",file:"songthree.mp3"}
+];
+
+let i=0, playing=false;
+
+function loadSong(){
+    audio.src = songs[i].file;
+    audio.load();
+
+    songTitle.innerText = songs[i].title;
+    songArtist.innerText = songs[i].artist;
+
+    progress.style.background =
+        "linear-gradient(to right, #E4E2DD 0%, #E4E2DD 0%, black 0%, black 100%)";
+}
+
+function playPause(){
+    if(!playing){
+        audio.play();
+        playBtn.innerText="⏸";
+        vinyl.style.animationPlayState="running";
+        playing=true;
+    }else{
+        audio.pause();
+        playBtn.innerText="▶";
+        vinyl.style.animationPlayState="paused";
+        playing=false;
+    }
+}
+
+function nextSong(){
+    i=(i+1)%songs.length;
+    loadSong();
+    audio.play();
+    vinyl.style.animationPlayState="running";
+}
+
+function prevSong(){
+    i=(i-1+songs.length)%songs.length;
+    loadSong();
+    audio.play();
+    vinyl.style.animationPlayState="running";
+}
+
+audio.ontimeupdate = () => {
+    if (!audio.duration || isNaN(audio.duration)) return;
+
+    const value = (audio.currentTime / audio.duration) * 100;
+    progress.value = value;
+
+    progress.style.background =
+        `linear-gradient(to right, #E4E2DD 0%, #E4E2DD ${value}%, black ${value}%, black 100%)`;
+};
+
+progress.oninput = () => {
+    if (!audio.duration || isNaN(audio.duration)) return;
+
+    const value = progress.value;
+    audio.currentTime = (value / 100) * audio.duration;
+
+    progress.style.background =
+        `linear-gradient(to right, #E4E2DD 0%, #E4E2DD ${value}%, black ${value}%, black 100%)`;
+};
+
+loadSong();
+
+function goToCoffee() {
+    show("products");
+    productBtn.classList.add("active");
+
+    setTimeout(() => {
+        document.getElementById("coffeeMenu").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 100);
+}
+
+function goToPastry() {
+    show("products");
+    productBtn.classList.add("active");
+
+    setTimeout(() => {
+        document.getElementById("pastryMenu").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 100);
+}
+</script>
+
+</body>
+</html>
